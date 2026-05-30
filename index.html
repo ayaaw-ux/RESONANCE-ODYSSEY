@@ -1312,15 +1312,22 @@
             color: #3C2B20;
             line-height: 1.4;
             flex: 1;
+            text-align: justify;
+        }
+
+        .description-card .card-content {
             overflow-y: auto;
             overflow-x: hidden;
-            text-align: justify;
             scrollbar-width: none;
             -ms-overflow-style: none;
         }
 
-        .card-content::-webkit-scrollbar {
+        .description-card .card-content::-webkit-scrollbar {
             display: none;
+        }
+
+        .question-card .card-content {
+            overflow: visible;
         }
 
         .card-content p {
@@ -2611,11 +2618,21 @@
                 margin-bottom: clamp(15px, 3vw, 20px);
             }
 
-            #quiz-options {
-                gap: clamp(10px, 2vw, 12px);
-                margin-bottom: clamp(12px, 2.5vw, 15px);
+            .quiz-options {
+                margin-top: 10px;
+                display: grid;
+                gap: 8px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                max-height: 300px;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                padding-right: 4px;
             }
 
+            .quiz-options::-webkit-scrollbar {
+                display: none;
+            }
             .quiz-opt-btn {
                 padding: clamp(10px, 1.8vw, 12px) clamp(8px, 1.5vw, 10px);
                 font-size: clamp(11px, 2vw, 14px);
