@@ -1315,6 +1315,12 @@
             overflow-y: auto;
             overflow-x: hidden;
             text-align: justify;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .card-content::-webkit-scrollbar {
+            display: none;
         }
 
         .card-content p {
