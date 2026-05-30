@@ -1327,18 +1327,24 @@
             display: none;
         }
 
-        .question-card .card-content {
-            overflow: visible;
-        }
-
-        /* Make only the answer options scrollable so question/deskripsi remain static */
-        .question-card .quiz-options {
+        .question-card {
             overflow-y: auto;
             overflow-x: hidden;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: thin;
-            max-height: clamp(140px, 28vh, 320px);
-            padding-right: 6px;
+            max-height: calc(100vh - 260px);
+            min-height: 0;
+        }
+
+        .question-card .card-content {
+            overflow: visible;
+            flex: none;
+        }
+
+        .question-card .quiz-options {
+            overflow: visible;
+            max-height: none;
+            padding-right: 0;
         }
 
         .card-content p {
