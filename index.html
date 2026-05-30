@@ -1328,12 +1328,17 @@
         }
 
         .question-card .card-content {
+            overflow: visible;
+        }
+
+        /* Make only the answer options scrollable so question/deskripsi remain static */
+        .question-card .quiz-options {
             overflow-y: auto;
             overflow-x: hidden;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: thin;
-            max-height: calc(100vh - 320px);
-            min-height: 0;
+            max-height: clamp(140px, 28vh, 320px);
+            padding-right: 6px;
         }
 
         .card-content p {
