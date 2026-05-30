@@ -1304,16 +1304,25 @@
             font-size: 14px;
             color: #4E2E1E;
             margin-bottom: 8px;
-            text-transform: uppercase;
             letter-spacing: 0.08em;
         }
 
         .card-content {
-            font-size: 13px;
+            font-size: 11px;
             color: #3C2B20;
             line-height: 1.4;
             flex: 1;
             overflow: hidden;
+        }
+
+        .card-content p {
+            margin: 4px 0;
+            font-size: 11px;
+        }
+
+        .card-content img {
+            max-height: 150px;
+            object-fit: contain;
         }
 
         .description-card,
@@ -2881,7 +2890,7 @@
     <!-- QUIZ CARDS OVERLAY -->
     <div id="quiz-cards-overlay" class="screen-overlay">
         <div class="content-card">
-            <div class="quiz-header">Kartu Tantangan Musik</div>
+            <div class="quiz-header">Kartu Angklung</div>
             <div class="cards-container">
                 <div class="card description-card" id="card-1">
                     <div class="card-title">Deskripsi Soal</div>
@@ -3985,7 +3994,7 @@
             let card4Correct = quiz2.correct;
 
             if (state.idx === 1) {
-                document.querySelector('#card-1 .card-title').innerText = 'Angklung (Jawa Barat)';
+                document.querySelector('#card-1 .card-title').innerText = 'Angklung';
                 desc1HTML = `
                     <img src="https://raw.githubusercontent.com/yursunrise25-coder/MEDIAAROV1/6d5c189745d78f0d32c2c021fd16b4d4d02b77b3/B.1%20ANGKLUNG%20(1).png" alt="Angklung" style="width: 100%; border-radius: 12px; margin-bottom: 12px;">
                     <p><strong>Angklung</strong> adalah alat musik bambu yang dimainkan dengan cara diguncang sehingga tabung-tabungnya bergetar dan menghasilkan bunyi. Getaran bambu memicu resonansi kolom udara di dalam tabung, menghasilkan frekuensi tertentu (±200–2.000 Hz) sesuai ukuran tabung. Secara fisika, angklung menunjukkan konsep gelombang bunyi, resonansi, frekuensi alami, dan superposisi gelombang. Bunyi yang dihasilkan berkisar sedang hingga keras (±70-90 dB) dan semakin kuat saat dimainkan dalam ansambel (UNESCO ICH, 2010; Kunst, 1973).</p>
@@ -3997,14 +4006,14 @@
                     <p>Seorang siswa menebak:</p>
                     <blockquote>“Frekuensi nada dasar A lebih kecil daripada angklung B”</blockquote>
                 `;
-                card3Title = 'Angklung Tier 1: Proportional reasoning, memahami hubungan berbanding terbalik';
+                card3Title = 'Angklung Tier 1: Proportional Reasoning, Memahami Hubungan Berbanding Terbalik';
                 card3HTML = `
                     <img src="https://raw.githubusercontent.com/yursunrise25-coder/MEDIAAROV1/6d5c189745d78f0d32c2c021fd16b4d4d02b77b3/B.2%20ANGKLUNG.png" alt="Angklung Tier 1" style="width: 100%; border-radius: 12px; margin-bottom: 12px;">
                     <p>Perbandingan frekuensi nada dasar angklung A dan B (fa : fb) adalah …</p>
                 `;
                 card3Options = ['A. 3:4', 'B. 4:3', 'C. 1:1', 'D. 2:1', 'E. 1:2'];
                 card3Correct = 0;
-                card4Title = 'Angklung Tier 2: Proportional reasoning, memahami hubungan berbanding terbalik';
+                card4Title = 'Angklung Tier 2: Proportional Reasoning, Memahami Hubungan Berbanding Terbalik';
                 card4HTML = `
                     <img src="https://raw.githubusercontent.com/yursunrise25-coder/MEDIAAROV1/6d5c189745d78f0d32c2c021fd16b4d4d02b77b3/B.2%20ANGKLUNG.png" alt="Angklung Tier 2" style="width: 100%; border-radius: 12px; margin-bottom: 12px;">
                     <p>Pernyataan siswa tersebut adalah …</p>
@@ -4021,6 +4030,10 @@
                 document.querySelector('#card-1 .card-title').innerText = 'Deskripsi Soal';
                 document.querySelector('#card-2 .card-title').innerText = 'Deskripsi Soal';
             }
+
+            // Set card 3 and 4 titles
+            document.querySelector('#card-3 .card-title').innerText = card3Title;
+            document.querySelector('#card-4 .card-title').innerText = card4Title;
 
             document.getElementById('desc-1').innerHTML = desc1HTML;
             document.getElementById('desc-2').innerHTML = desc2HTML;
