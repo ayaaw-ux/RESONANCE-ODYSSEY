@@ -1321,12 +1321,24 @@
         .description-card .card-content {
             overflow-y: auto;
             overflow-x: hidden;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(120,80,36,0.6) transparent;
+            scrollbar-gutter: stable;
+            padding-right: 16px;
         }
 
         .description-card .card-content::-webkit-scrollbar {
-            display: none;
+            width: 10px;
+        }
+
+        .description-card .card-content::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.15);
+            border-radius: 999px;
+        }
+
+        .description-card .card-content::-webkit-scrollbar-thumb {
+            background: rgba(120,80,36,0.45);
+            border-radius: 999px;
         }
 
         .question-card {
