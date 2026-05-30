@@ -1258,7 +1258,8 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
-            overflow: hidden;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         #quiz-cards-overlay .quiz-header {
@@ -1327,7 +1328,12 @@
         }
 
         .question-card .card-content {
-            overflow: visible;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            max-height: calc(100vh - 320px);
+            min-height: 0;
         }
 
         .card-content p {
