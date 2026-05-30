@@ -1386,8 +1386,25 @@
             border: 1px solid #C89B3C;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 12px;
+            font-size: clamp(13px, 1.8vw, 15px);
             text-align: left;
+        }
+
+        /* Uniform font sizes for quiz overlay cards */
+        #quiz-cards-overlay .card-title {
+            font-size: clamp(14px, 2.2vw, 16px);
+            line-height: 1.2;
+        }
+
+        #quiz-cards-overlay .card-content,
+        #quiz-cards-overlay .card-content p {
+            font-size: clamp(12px, 1.8vw, 14px);
+            line-height: 1.5;
+        }
+
+        #quiz-cards-overlay .quiz-options button,
+        #quiz-cards-overlay .quiz-opt-btn {
+            font-size: clamp(13px, 1.8vw, 15px);
         }
 
         .quiz-options button:hover {
